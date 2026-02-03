@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRISME-F Graph Data Based Chain React Test</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="topbar">
+  <div class="brand">PRISME-F Graph Data Based Chain React Test</div>
+        <div class="topbar-controls">
+          <label for="themeSelect">테마</label>
+          <select id="themeSelect">
+            <option value="cool-tech">Cool Tech</option>
+            <option value="neon-terminal">Neon Terminal</option>
+            <option value="cyberpunk-noir">Cyberpunk Noir</option>
+          </select>
+        </div>
+      </div>
+      <div id="content">
+        <div id="ui">
+    <h1>PRISME-F Graph Data Based Chain React Test</h1>
+          <div class="row">
+            <label for="panelSelect">패널</label>
+            <select id="panelSelect"></select>
+          </div>
+          <div class="row">
+            <label for="deltaW">ΔWidth</label>
+            <input id="deltaW" type="number" value="10" />
+          </div>
+          <div class="row">
+            <label for="deltaH">ΔHeight</label>
+            <input id="deltaH" type="number" value="0" />
+          </div>
+          <button id="apply">변경 적용</button>
+          <p class="hint">패널 중심 기준 좌표, thickness 고정.</p>
+        </div>
+        <div id="scenes">
+        <div class="scene-block">
+          <h2>가구 3D</h2>
+          <canvas id="scene-furniture"></canvas>
+        </div>
+        <div class="scene-block">
+          <h2>그래프 3D</h2>
+          <canvas id="scene-graph"></canvas>
+          <div id="tooltip" class="overlay hidden"></div>
+          <div id="face-overlay" class="overlay hidden">
+            <div class="overlay-header">
+              <span>Face Overlap</span>
+              <button id="overlay-close" type="button">닫기</button>
+            </div>
+            <canvas id="face-canvas" width="360" height="180"></canvas>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
